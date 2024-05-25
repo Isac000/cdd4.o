@@ -1,0 +1,40 @@
+class Jogador():
+    def _init_(self):
+        self.jogador1 = ""
+        self.jogador2 = ""
+
+    def Jokenpo(self):
+        n1 = int(input(f"\nJogador 1 digite:\n1 para jogar pedra\n2 para jogar papel\n3 para jogar tesoura\n"))
+
+        if n1 == 1:
+            self.jogador1 = "pedra"
+        elif n1 == 2:
+            self.jogador1 = "papel"
+        elif n1 == 3:
+            self.jogador1 = "tesoura"
+        print(f"\nJogador 1 jogou {self.jogador1}")
+        print("=" * 40)
+        n2 = int(input(f"\nJogador 2 digite:\n1 para jogar pedra\n2 para jogar papel\n3 para jogar tesoura\n"))
+    
+        if n2 == 1:
+            self.jogador2 = "pedra"
+        elif n2 == 2:
+            self.jogador2 = "papel"
+        elif n2 == 3:
+            self.jogador2 = "tesoura"
+        print(f"\nJogador 2 jogou {self.jogador2}")
+        print("=" * 40)
+        if self.jogador1 == "pedra" and self.jogador2 == "tesoura":
+            print("Jogador 1 venceu")
+        elif self.jogador1 == "papel" and self.jogador2 == "pedra":
+            print("Jogador 1 venceu")
+        elif self.jogador1 == "tesoura" and self.jogador2 == "papel":
+            print("Jogador 1 venceu")
+        elif self.jogador1 == "pedra" and self.jogador2 == "papel":
+            print("Jogador 2 venceu")
+        elif self.jogador1 == "papel" and self.jogador2 == "tesoura":
+            print("Jogador 2 venceu")
+        elif self.jogador1 == "tesoura" and self.jogador2 == "pedra":
+            print("Jogador 1 venceu")
+        elif self.jogador1 == self.jogador2:
+            print("Empatou amigãoo skksks")
